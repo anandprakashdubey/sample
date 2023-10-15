@@ -1,0 +1,23 @@
+<h6>One Way Binding</h6>
+
+<b>Text Interpolation Example</b> : Variable Name - <b> FirstName </b>: Value:
+<b>{{ firstName }}</b>
+
+<br />
+<br />
+<b>Property Binding</b> : <span [class]="spanMyWorld"> This is my world</span>
+<br />
+<br />
+<b>Event Binding</b> :
+<button (click)="onButtonClick()">Change Span Color</button>
+<br />
+<br /><br />
+<br /><br />
+<br />
+<b>Two Way Binding</b> :
+
+<input type="text" [(ngModel)]="fullAddress" />
+
+<br /><br />
+
+{{ fullAddress }}
