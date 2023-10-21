@@ -7,6 +7,7 @@ import { HomeComponent } from './home/home.component';
 import { AboutusComponent } from './aboutus/aboutus.component';
 import { BindingExampleComponent } from './bindingexample/bindingexample.component';
 import { FormsModule } from '@angular/forms';
+import { UserRegistrationComponent } from './user-registration/user-registration.component';
 
 @NgModule({
   declarations: [
@@ -14,6 +15,7 @@ import { FormsModule } from '@angular/forms';
     HomeComponent,
     AboutusComponent,
     BindingExampleComponent,
+    UserRegistrationComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule],
   providers: [],
