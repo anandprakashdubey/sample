@@ -1,7 +1,7 @@
-export class UserDetail {
-  public id: number = 0;
-  public name: string = '';
-  public age: number = 0;
-  public address: string = '';
-  public city: string = '';
+export class Registration {
+  public Id: number = 0;
+  public Name: string = '';
+  public Age: number = 0;
+  public Address: string = '';
+  public City: string = '';
 }
