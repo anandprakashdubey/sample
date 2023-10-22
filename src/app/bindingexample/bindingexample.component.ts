@@ -24,6 +24,6 @@ export class BindingExampleComponent {
   }
 
   getUserList() {
-    this.newlyCreateUserObject = this.userService.getUser();
+    this.newlyCreateUserObject = {};
   }
 }

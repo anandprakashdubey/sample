@@ -1,5 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { Observable } from 'rxjs';
+import { CityList } from '../models/user.model';
 
 @Injectable({
   providedIn: 'root',
@@ -9,7 +11,7 @@ export class CityMasterService {
 
   constructor(private http: HttpClient) {}
 
-  getCities() {
-    return this.http.get(`${this.BaseUrl}/cities`);
+  getCities(): Observable<CityList[]> {
+    return this.http.get<CityList[]>(`${this.BaseUrl}/cities`);
   }
 }

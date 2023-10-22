@@ -8,7 +8,6 @@ import { AboutusComponent } from './aboutus/aboutus.component';
 import { BindingExampleComponent } from './bindingexample/bindingexample.component';
 import { FormsModule } from '@angular/forms';
 import { UserRegistrationComponent } from './user-registration/user-registration.component';
-import { UserRegistrationService } from './services/user-registration.service';
 import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
@@ -20,7 +19,7 @@ import { HttpClientModule } from '@angular/common/http';
     UserRegistrationComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule, HttpClientModule],
-  providers: [UserRegistrationService],
+  providers: [],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

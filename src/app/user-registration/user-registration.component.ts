@@ -25,7 +25,12 @@ export class UserRegistrationComponent {
 
     //this.userService.setUser(userForm.value);
     this.userDetailModel.Age = +this.userDetailModel.Age;
-    this.userService.createUser(this.userDetailModel);
+
+    userForm.value.age = +userForm.value.age;
+
+    this.userService.createUser(userForm.value).subscribe({
+      next: (data) => console.log('API Called, and Return Value', data),
+    });
   }
 
   ngOnInit() {

@@ -1,29 +1,19 @@
 import { Injectable } from '@angular/core';
 import { Registration } from '../models/user.model';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { Observable } from 'rxjs';
 
-@Injectable()
+@Injectable({
+  providedIn: 'root',
+})
 export class UserRegistrationService {
-  public userRegistrationProp: Registration = new Registration();
+  private BaseUrl: string = 'http://localhost:5183/api/UserRegistration';
 
-  private BaseUrl: string = 'https://localhost:7146/api/UserRegistration';
-
-  constructor(private http: HttpClient) {}
-
-  setUser(_user: Registration) {
-    this.userRegistrationProp = _user;
-  }
-
-  getUser() {
-    return this.userRegistrationProp;
-  }
+  constructor(public http: HttpClient) {}
 
   /*HTTP SERVICE METHODS*/
 
-  createUser(user: any) {
-    const endpointURL = `https://localhost:7146/api/UserRegistration/register`;
-    const headers = new HttpHeaders({ 'Content-Type': 'application/json' });
-
-    return this.http.post<any>(endpointURL, user, { headers });
+  createUser(user: Registration): Observable<Registration> {
+    return this.http.post<Registration>(`${this.BaseUrl}/userRegister`, user);
   }
 }

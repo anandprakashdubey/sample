@@ -5,3 +5,8 @@ export class Registration {
   public Address: string = '';
   public City: string = '';
 }
+
+export class CityList {
+  id: number = 0;
+  name: string = '';
+}
