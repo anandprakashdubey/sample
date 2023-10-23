@@ -14,6 +14,22 @@ export class UserRegistrationService {
   /*HTTP SERVICE METHODS*/
 
   createUser(user: Registration): Observable<Registration> {
-    return this.http.post<Registration>(`${this.BaseUrl}/userRegister`, user);
+    return this.http.post<Registration>(`${this.BaseUrl}/createUser`, user);
+  }
+
+  updateUser(user: Registration): Observable<Registration> {
+    return this.http.post<Registration>(`${this.BaseUrl}/updateUser`, user);
+  }
+
+  deleteUser(id: number): Observable<any> {
+    return this.http.post<any>(`${this.BaseUrl}/deleteUser/${id}`, id);
+  }
+
+  getUserById(id: number): Observable<Registration> {
+    return this.http.get<Registration>(`${this.BaseUrl}/getUser/${id}`);
+  }
+
+  getUsers(): Observable<Registration[]> {
+    return this.http.get<Registration[]>(`${this.BaseUrl}/getUsers`);
   }
 }

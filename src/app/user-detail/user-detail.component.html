@@ -1,0 +1,14 @@
+<p>user-detail works!</p>
+<div>
+  <span>name: {{ userData.name }}</span>
+  <span>age: {{ userData.age }}</span>
+  <span>address: {{ userData.address }}</span>
+  <span>city: {{ userData.city }}</span>
+</div>
+
+<button
+  [routerLink]="['/user-registration', userData.id]"
+  class="btn btn-primary"
+>
+  Edit
+</button>

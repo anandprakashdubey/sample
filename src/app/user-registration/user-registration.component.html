@@ -5,7 +5,7 @@
       <input
         type="text"
         class="form-control"
-        [(ngModel)]="userDetailModel.Name"
+        [(ngModel)]="userDetailModel.name"
         name="name"
       />
     </div>
@@ -14,7 +14,7 @@
       <input
         type="text"
         class="form-control"
-        [(ngModel)]="userDetailModel.Age"
+        [(ngModel)]="userDetailModel.age"
         name="age"
       />
     </div>
@@ -23,7 +23,7 @@
       <input
         type="text"
         class="form-control"
-        [(ngModel)]="userDetailModel.Address"
+        [(ngModel)]="userDetailModel.address"
         name="address"
         required
       />
@@ -33,7 +33,7 @@
       <select
         class="form-control"
         name="city"
-        [(ngModel)]="userDetailModel.City"
+        [(ngModel)]="userDetailModel.city"
       >
         <option *ngFor="let _city of cityList" [value]="_city">
           {{ _city }}

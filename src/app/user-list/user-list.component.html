@@ -1,0 +1,36 @@
+<h6>User List</h6>
+
+<div class="container">
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th scope="col">Id</th>
+        <th scope="col">Name</th>
+        <th scope="col">Age</th>
+        <th scope="col">Address</th>
+        <th scope="col">City</th>
+        <th scope="col">#</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let user of userList">
+        <td scope="col">{{ user.id }}</td>
+        <td scope="col">{{ user.name }}</td>
+        <td scope="col">{{ user.age }}</td>
+        <td scope="col">{{ user.address }}</td>
+        <td scope="col">{{ user.city }}</td>
+        <td scope="col">
+          <button class="btn btn-danger" (click)="onDelete(user)">
+            Delete
+          </button>
+          <button
+            class="btn btn-warning"
+            [routerLink]="['/user-detail', user.id]"
+          >
+            Details
+          </button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
